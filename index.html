@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Who's that Pokémon?</title>
+	
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	  <script src="assets/javascript/game.js"></script>
+
+	<script>
+        function initializeGame() {
+			startGame();
+			document.getElementById("easyGame").style.backgroundColor = "red";
+        }
+        window.onload = initializeGame;
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="topnav" id="myTopnav">
+			<a href="#" id="resetGame" onclick="resetGame()">New Game</a>
+			<a href="#" id="easyGame" onclick="easyMode()">Easy Mode</a>
+			<a href="#" id="hardGame" onclick="hardMode()">Hard Mode</a>
+			<a href="#" id="playMusic" onclick="playMusic()">Music</a>
+			<a href="javascript:void(0);" class="icon" onclick="showGameModes()">
+				<span class="glyphicon glyphicon-menu-hamburger">Options</span>
+			</a>
+		</div>
+	</div>
+	<div class="container">
+		<div class="Pokeball">
+			<img src="assets/images/pokeball.png" alt="Animated Pokeball">
+		</div>
+	</div>
+	<div class="wrapper">	
+		<div class="container">
+			<div align="center">
+				<h2><span id="who-was-it">???</span></h2>
+				<h2><pre>Current Pokémon</pre></h2>
+			
+				<h2><span id="current-pokemon"><pre></pre></span></h2>
+			</div>
+		</div>
+		<div class="container">
+				<div align="center">
+					<h3>Wins: <span id="user-wins"><strong> 0</strong></span></h3>
+					<h3>Number of guesses remaining: <span id="user-remaining"><strong></strong></span></h3>
+					<h3>Letters already guessed: <span id="user-guessed"><strong></strong></span></h3>
+				</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="card mx-auto flip-container" style="width: 18rem;">
+						<p align="center">Current Pokémon</p>
+						<img class="card-img-top" src="assets/images/unknown.jpg" alt="Who's that pokemon?!" id="pokemon-image-current">
+						<div class="card-body">
+							<p class="card-text" id="pokemon-text-current"></p>
+						</div>
+					</div>
+				</div>
+				<div class="col" id="previous-pokemon" style="display: none;">
+						<div class="card mx-auto flip-container" style="width: 18rem;">
+							<p align="center">Previous Pokémon</p>
+							<img class="card-img-top" src="assets/images/unknown.jpg" alt="Who's that pokemon?!" id="pokemon-image-previous">
+							<div class="card-body">
+								<p class="card-text" id="pokemon-text-previous"></p>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="push"></div>
+	</div>
+	<div class="footer">
+		<div class="container">  
+			<div class="row">
+				<div class="col col-center">
+					<div class="topnav" id="myFooter">
+						<a href="http://www.pokemon.com" target="_blank">All Pokémon names, images, and descriptions are Copyright© The Pokémon Company</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
