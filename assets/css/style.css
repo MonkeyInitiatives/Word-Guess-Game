@@ -67,6 +67,27 @@ html{
   display: none;
 } 
 
+.centered{
+  text-align: center;
+}
+
+p{
+  text-align: center;
+}
+
+.preformatted {
+  font-family: monospace;
+}
+
+.footer, .push {
+  height: 50px;
+  text-align: center;
+}
+
+#myFooter a{
+  float: none;
+}
+
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
@@ -87,13 +108,4 @@ html{
     display: block;
     text-align: left;
   } 
-}
-
-.footer, .push {
-  height: 50px;
-  text-align: center;
-}
-
-#myFooter a{
-  float: none;
 }
